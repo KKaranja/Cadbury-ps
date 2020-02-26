@@ -1,97 +1,54 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:url" content="http://cadbury.co.ke/ps/ps/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Made with Cadbury P.S. #SayItWithPS" />
+    <meta property="og:description" content="Made with Cadbury P.S. #SayItWithPS" />
+    <meta property="og:image" content="http://cadbury.co.ke/ps/ps/wp-content/uploads/2020/02/PS-Cadbury-Thanks.jpg" />
+    <meta property="og:site_name" content="Made with Cadbury P.S." /> 
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Cadbury_KE">
+    <meta name="twitter:title" content="Made with Cadbury P.S.">
+    <meta name="twitter:description" content="Made with Cadbury P.S.">
+    <meta name="twitter:creator" content="@Cadbury_KE">
+    <!-- <meta name="twitter:image" content="http://cadbury.co.ke/ps/ps/wp-content/uploads/2020/02/PS-Cadbury-Thanks.jpg"> -->
+    <meta name="twitter:domain" content="http://cadbury.co.ke/ps/ps/">
+
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/css/swiper.min.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Bowlby+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://www.cadbury.co.za/psbar/core/misc/favicon.ico" type="image/vnd.microsoft.icon" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <?php wp_head(); ?>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.1/js/swiper.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script>
+
 </head>
-
 <body>
-    <header class="header">
-        <div class="container element-display">
-        <button type="button" id="sidebarCollapse" class="btn-toggle">
-            <i class="fas fa-align-justify"></i>
-            <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="align-justify" class="svg-inline--fa fa-align-justify fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-128H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"></path></svg>
-            </button>
-            <img class="logo" src="http://localhost/Cadbury-ps/wp-content/uploads/2020/01/cadbury-logo.png">
-        </div>
-    </header>
-    <!-- Sidebar  -->
-    <nav id="sidebar" style="list-style-type:none">
-    <div class="menu">
-        <ul class="sidebar-list">
-            <li>
-                <label for="all-elements" style="color:#542f84;"><strong>All</strong></label>
-                <input type="radio" name="radSize" id="all-elements" value="small" />
-            </li>
-            <li>
-                <label for="be-strong" style="color:#62be71;"><strong>#JustBeStrong</strong></label>
-                <input type="radio" name="radSize" id="be-strong" value="small" />
-            </li>
-            <li>
-                <label for="winning" style="color:#3c62a5;"><strong>#Winning</strong></label>
-                <input type="radio" name="radSize" id="winning" value="small" />
-            </li>
-            <li>
-                <label for="be-my-bae" style="color:#6b5d9c;"><strong>Be My Bae</strong></label>
-                <input type="radio" name="radSize" id="be-my-bae" value="small" />
-            </li>
-            <li>
-                <label for="big-hugs" style="color:#f173ac;"><strong>Big Hugs</strong></label>
-                <input type="radio" name="radSize" id="big-hugs" value="small" />
-            </li>
-            <li>
-                <label for="happy-b-day" class="size-small" style="color:#f15641;"><strong>Happy Bday</strong></label>
-                <input type="radio" name="radSize" id="happy-b-day" value="small" />
-            </li>
-            <li>
-                <label for="sorry" style="color:#f58220;"><strong>I'm Sorry</strong></label>
-                <input type="radio" name="radSize" id="sorry" value="small" />
-            </li>
-            <li>
-                <label for="awesome" style="color:#07afef;"><strong>You're Awesome</strong></label>
-                <input type="radio" name="radSize" id="awesome" value="small" />
-            </li>
-            <li>
-                <label for="love-you" style="color:#e04c6f;"><strong>I Love You</strong></label>
-                <input type="radio" name="radSize" id="love-you" value="small" />
-            </li>
-            <li>
-                <label for="thanks" style="color:#63b294;"><strong>Thanks</strong></label>
-                <input type="radio" name="radSize" id="thanks" value="small" />
-            </li>
-            <li>
-                <label for="besties" style="color:#8dc63f;"><strong>Besties</strong></label>
-                <input type="radio" name="radSize" id="besties" value="small" />
-            </li>
-        </ul>
 
-        <ul class="sidenav-page-links" style="list-style-type:none">
-            <li>
-                <a href="" ><strong>Not sure what to do</strong></a>
-            </li>
-            <li>
-                <a href=""><strong>Cookie policy</strong></a>
-            </li>
-            <li>
-                <a href="" ><strong>Privacy policy</strong></a>
-            </li>
-            <li>
-                <a href=""><strong>Terms and conditions</strong></a>
-            </li>
-        </ul>
-        </div>
-    </nav>
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $('#sidebarCollapse').click(function() {
-
-                $('#sidebar').toggle();
-                $('.collapse.in').toggleClass('in');
-                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-            });
-        });
-
-    </script>
+    <!-- <header class="header">
+        <img class="logo" src="http://localhost/cubi/cadbury-ps/wp-content/uploads/2020/01/cadbury-logo.png" tabindex="0">
+    </header> -->
